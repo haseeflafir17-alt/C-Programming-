@@ -34,7 +34,7 @@ int main(){
     
     }
     else{
-        printf("Enter a number higher then 1");
+        printf("Enter a number higher than 1");
     }
     return 0;
 }
