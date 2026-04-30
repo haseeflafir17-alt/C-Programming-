@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include <math.h>
 int isPrime(int j){
-    int sqt = (int) sqrt(j);
-    for(int i=2;i<=sqt;i++){
-        if(j % i == 0){
-            return 0;
+    if (j<2){
+        return 0;
+    }
+    else{
+        int sqt = (int) sqrt(j);
+        for(int i=2;i<=sqt;i++){
+            if(j % i == 0){
+                return 0;
+            }
         }
     }
     return 1;
@@ -20,6 +25,7 @@ int main(){
             scanf("%d",&input_num[i]);
         }
         for(int i=0;i<n;i++){
+            
             if(isPrime(input_num[i])){
                 prime[x]=input_num[i];
                 x++;
