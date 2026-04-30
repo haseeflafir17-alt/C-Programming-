@@ -14,6 +14,7 @@ int main(){
             for(int j=2;j<=sqt;j++){
                 if(i %j ==0){
                     count++;
+                    break;
                 }
             }
             if(count == 0){
