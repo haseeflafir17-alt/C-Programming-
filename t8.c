@@ -1,22 +1,21 @@
 #include <stdio.h>
+int factorial(int n){
+    int fact=1;
+    for (int i = 1; i <= n; i++)
+    {
+        fact *= i;
+    }
+    return fact;
+    
+}
 int isStrong(int n){
     int num = n;
-    int digit = 0;
+    int total = 0;
     while (num!=0)
     {
+        int temp = num%10;
+        total += factorial(temp);
         num /=10;
-        digit++;
-    }
-    num = n;
-    int total = 0;
-    for(int i=1;i<=digit;i++){
-        int temp= num %10;
-        int sum1=1;
-        for(int j= 1;j<=temp;j++){
-            sum1 = sum1 * j;
-        }
-        total += sum1;
-        num /= 10;
     }
     if(total == n){
         return 1;
