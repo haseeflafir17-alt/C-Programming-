@@ -1,10 +1,9 @@
 #include <stdio.h>
 int SumPD(int n){
     int sum =0;
-    int num = n;
         for(int i =1;i<n;i++){
             
-            if(num%i==0){
+            if(n%i==0){
                 sum += i;
             }
         }
